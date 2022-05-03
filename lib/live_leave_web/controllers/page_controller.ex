@@ -1,4 +1,4 @@
-defmodule LiveLeaveWeb.AddUserController do
+defmodule LiveLeaveWeb.PageController do
   use LiveLeaveWeb, :controller
 
   def index(conn, _params) do

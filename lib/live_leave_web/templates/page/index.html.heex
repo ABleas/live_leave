@@ -1,0 +1,25 @@
+<LiveLeaveWeb.Components.section>
+  <div class="flex">
+    <h2 class="flex-1 text-2xl bold">On leave this week</h2>
+
+    <a
+      class="flex items-center hover:underline text-sky-600 fill-sky-600"
+      href={Routes.static_path(@conn, "/timeline")}>
+      <FontAwesome.LiveView.icon name="calendar" type="regular" class="h-[14px] w-[14px] mr-2" />
+      <span>More</span>
+    </a>
+  </div>
+
+  <div class="w-full h-[500px]"></div>
+
+  <div class="flex">
+    <h2 class="flex-1 text-2xl bold">Members</h2>
+
+    <a
+      class="flex items-center hover:underline text-sky-600 fill-sky-600"
+      href={Routes.static_path(@conn, "/members")}>
+      <FontAwesome.LiveView.icon name="list" type="solid" class="h-[14px] w-[14px] mr-2" />
+      <span>View all</span>
+    </a>
+  </div>
+</LiveLeaveWeb.Components.section>

@@ -8,6 +8,7 @@ defmodule LiveLeaveWeb.Router do
     plug :put_root_layout, {LiveLeaveWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug LiveLeaveWeb.Plugs.Locale, "en"
   end
 
   pipeline :api do
@@ -17,8 +18,10 @@ defmodule LiveLeaveWeb.Router do
   scope "/", LiveLeaveWeb do
     pipe_through :browser
 
-    get "/", HomeController, :index
-    get "/add_user", AddUserController, :index
+    get "/", PageController, :index
+    get "/members", MembersController, :index
+    get "/members/new", MembersController, :new
+    get "/members/:id", MembersController, :_id
   end
 
   # Other scopes may use custom stacks.

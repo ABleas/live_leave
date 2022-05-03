@@ -9,19 +9,16 @@
     <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css")}/>
     <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>
   </head>
-  <body>
+  <body class="bg-gradient-to-b from-[#08080b] to-zinc-900 min-h-screen flex flex-col">
     <header>
-      <section class="container">
-        <nav>
-          <ul>
-            <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
-            <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
-              <li><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home) %></li>
-            <% end %>
-          </ul>
-        </nav>
-        <a href="https://phoenixframework.org/" class="phx-logo">
-          <img src={Routes.static_path(@conn, "/images/phoenix.png")} alt="Phoenix Framework Logo"/>
+      <section class="w-full h-20 flex justify-center items-center">
+        <a class="flex text-5xl font-serif text-zinc-300" href={Routes.static_path(@conn, "/")}>
+          <FontAwesome.LiveView.icon
+            name="person-walking-luggage"
+            type="solid"
+            class="h-10 w-10 fill-amber-400 -scale-x-100"
+          />
+          <span class="pl-3">Live <span class="text-amber-400">Leave</span></span>
         </a>
       </section>
     </header>

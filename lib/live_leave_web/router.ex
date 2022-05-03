@@ -17,7 +17,7 @@ defmodule LiveLeaveWeb.Router do
   scope "/", LiveLeaveWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", HomeController, :index
     get "/add_user", AddUserController, :index
   end
 

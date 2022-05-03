@@ -1,3 +1,3 @@
-defmodule LiveLeaveWeb.PageViewTest do
+defmodule LiveLeaveWeb.HomeViewTest do
   use LiveLeaveWeb.ConnCase, async: true
 end

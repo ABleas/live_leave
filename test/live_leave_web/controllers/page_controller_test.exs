@@ -1,4 +1,4 @@
-defmodule LiveLeaveWeb.PageControllerTest do
+defmodule LiveLeaveWeb.HomeControllerTest do
   use LiveLeaveWeb.ConnCase
 
   test "GET /", %{conn: conn} do
